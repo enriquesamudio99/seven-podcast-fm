@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m; 
  
 html {
     box-sizing: border-box;
@@ -60,5 +61,13 @@ ul {
 @media (min-width: 1400px) {
     .container {
         max-width: 1320px;
+    }
+}
+
+.section {
+    padding: calc(v.$sectionGutter * 1.5) 0;
+
+    @include m.lg { 
+        padding: calc(v.$sectionGutter * 2) 0;
     }
 }
