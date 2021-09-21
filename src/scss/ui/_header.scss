@@ -1,0 +1,42 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+    padding: v.$sectionGutter 0;
+    @include m.bgImage("../img/header.jpg", v.$transparentSecondary); 
+    
+    .logo {
+        width: 140px;
+        margin: 0 auto;
+
+        @include m.md { 
+            width: 200px;
+            margin: 0;
+        }
+    }
+
+    .header-content {
+        padding: calc(v.$sectionGutter * 2) 0;
+        text-align: center;
+
+        @include m.md { 
+            text-align: left;
+        }
+
+        @include m.lg { 
+            padding: calc(v.$sectionGutter * 3) 0;
+        }
+
+        h1 {
+            color: v.$white;
+
+            @include m.md { 
+                width: 50%;
+            }
+
+            @include m.xl { 
+                width: 40%;
+            }
+        }
+    }
+}

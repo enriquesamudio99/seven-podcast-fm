@@ -1,0 +1,68 @@
+@use "variables" as v;
+
+@mixin sm {
+    @media (min-width: v.$sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: v.$md) {
+        @content;
+    }
+} 
+
+@mixin lg {
+    @media (min-width: v.$lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: v.$xl) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: v.$xxl) {
+        @content;
+    }
+}
+
+@mixin btn($color, $text) {
+    background-color: $color;
+    font-size: 1.25rem;
+    padding: .75rem 2rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $text;
+    text-decoration: none;
+    transition: background-color .3s ease;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($color, 10);
+    }
+
+    @include md {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns,1fr);
+    gap: $gap;
+}
+
+@mixin bgImage($url, $gradientColor) {
+    background-image: linear-gradient(to right, $gradientColor 0%, $gradientColor 100%), url($url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
