@@ -4,3 +4,16 @@
 .btn-primary {
     @include m.btn(v.$primary, v.$secondary);
 }
+
+.btn-plan {
+    @extend .btn-primary;
+    border: 2px solid v.$white;
+    margin-top: 1.125rem;
+}
+
+.btn-plan-alt {
+    @extend .btn-primary;
+    border: 2px solid v.$white;
+    color: v.$white;
+    margin-top: 1.125rem;
+}

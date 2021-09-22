@@ -52,7 +52,7 @@ p {
 }
 
 .section-heading { 
-    color: v.$secondary;
+    color: v.$secondary; 
     font-size: 1.75rem;
     display: inline-block;
 
@@ -78,7 +78,11 @@ p {
     }
 }
 
-.section-heading-white {
+.section-heading-white-text {
+    color: v.$white;
+}
+
+.section-heading-white-border {
     &::after {
         background-color: v.$white;
     }

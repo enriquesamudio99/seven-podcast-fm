@@ -1,0 +1,125 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.plans {
+    background-color: v.$secondary;
+
+    .description {
+        color: v.$white;
+        margin-bottom: 2rem;
+        @include m.md { 
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.our-plans {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+
+    @include m.lg { 
+        flex-direction: row;
+        justify-content: center;
+        max-width: 920px;
+        margin-top: 8rem;
+    }
+
+    .plan {
+        background-color: v.$white;
+        flex-grow: 1;
+        padding: 8rem 2.5rem 2.5rem;
+        background-repeat: no-repeat;
+        background-position: top 6% center;
+        background-size: 64px;
+        text-align: center;
+        border-bottom: 1px solid #e1e1e1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include m.lg { 
+            background-size: 80px;
+            border-bottom: none; 
+            transition: transform .3s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+
+            @include m.md { 
+                font-size: 1.75rem;
+            }
+
+            @include m.xl { 
+                font-size: 2rem;
+            }
+        }
+
+        .price {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            @include m.md { 
+                font-size: 1.125rem;
+            }
+
+            @include m.xl { 
+                font-size: 1.25rem;
+            }
+        }
+
+        .list {
+
+            li {
+                margin-bottom: 1.125rem;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+
+        &.start {
+            background-image: url(../img/icono_inicio.svg);
+
+            @include m.lg {
+                border-top-left-radius: 1.125rem;
+                border-bottom-left-radius: 1.125rem;
+            }
+        }
+
+        &.business { 
+            background-color: v.$primary;
+            background-image: url(../img/icono_negocio.svg);
+            order: -1;
+
+            @include m.lg { 
+                order: unset;
+                margin: -3rem 0; 
+                border-radius: 1.125rem;
+                z-index: 2;
+            }
+        }
+
+        &.pro {   
+            background-image: url(../img/icono_pro.svg);
+
+            @include m.lg {
+                border-top-right-radius: 1.125rem;
+                border-bottom-right-radius: 1.125rem;
+            }
+        }
+
+    }
+
+
+}
