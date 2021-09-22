@@ -1,0 +1,27 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.benefits {
+    background-color: v.$primary;
+
+    .benefits-grid {
+        @include m.grid(1,v.$gutter);
+
+        @include m.md { 
+            @include m.grid(2,calc(v.$gutter * 2));
+            align-items: center;
+        }
+
+        @include m.xl { 
+            grid-template-columns: 3fr 2fr;
+            gap: calc(v.$gutter * 3);
+        }
+    }
+
+    p {
+        margin: 0;
+        @include m.md { 
+            font-size: 1.125rem;
+        }
+    }
+}

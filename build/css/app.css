@@ -459,31 +459,35 @@ p {
 
 .section-heading {
   color: #313c4e;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   display: inline-block;
 }
 @media (min-width: 768px) {
   .section-heading {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 992px) {
   .section-heading {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 @media (min-width: 1200px) {
   .section-heading {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 }
 .section-heading::after {
   content: "";
-  background-color: #84d9bc;
+  background-color: #4e947d;
   height: 6px;
   width: 50%;
   display: block;
   margin-top: 0.25rem;
+}
+
+.section-heading-white::after {
+  background-color: #FFFFFF;
 }
 
 .header {
@@ -532,7 +536,7 @@ p {
 }
 
 .btn-primary {
-  background-color: #84d9bc;
+  background-color: #4e947d;
   font-size: 1.25rem;
   padding: 0.75rem 2rem;
   font-weight: 700;
@@ -546,7 +550,7 @@ p {
 }
 .btn-primary:hover {
   cursor: pointer;
-  background-color: #5dcda7;
+  background-color: #3c7361;
 }
 @media (min-width: 768px) {
   .btn-primary {
@@ -571,6 +575,51 @@ p {
 
 .create-content p {
   margin: 0;
+}
+@media (min-width: 768px) {
+  .create-content p {
+    font-size: 1.125rem;
+  }
+}
+
+.benefits {
+  background-color: #4e947d;
+}
+.benefits .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .benefits .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .benefits .benefits-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 6rem;
+  }
+}
+.benefits p {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .benefits p {
+    font-size: 1.125rem;
+  }
+}
+
+.statistics p {
+  margin: 0 0 2rem 0;
+}
+@media (min-width: 768px) {
+  .statistics p {
+    font-size: 1.125rem;
+  }
 }
 
 .text-center {
