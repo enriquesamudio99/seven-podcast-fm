@@ -1,0 +1,64 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+    padding: calc(v.$sectionGutter * 1.5) 0 0;
+    background-color: v.$secondary;
+    color: v.$white;
+
+    @include m.lg { 
+        padding: calc(v.$sectionGutter * 2) 0 0;
+    }
+
+    .footer-grid {
+        padding-bottom: calc(v.$gutter * 2);
+        @include m.grid(1, 2.5rem);
+        border-bottom: 2px solid v.$primary;
+
+        @include m.sm { 
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include m.md { 
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @include m.lg { 
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+
+    .footer-logo {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .footer-widget {
+
+        h3 {
+            color: v.$primary;
+        }
+
+    }
+
+    nav {
+        
+        a {
+            display: block;
+            margin-bottom: 1rem;
+            color: v.$white;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    .copyright {
+        text-align: center;
+        margin: 0;
+        color: v.$white;
+        padding: 1.5rem 0;
+    }
+}
