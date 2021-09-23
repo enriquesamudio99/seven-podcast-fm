@@ -757,6 +757,67 @@ p {
   }
 }
 
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3.5rem;
+}
+@media (min-width: 576px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .testimonials {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+.testimonials h2 {
+  margin-bottom: 3.5rem;
+}
+
+.content p {
+  margin: 0;
+}
+.content .testimonial {
+  position: relative;
+  background-color: #4e947d;
+  border: 5px solid #313c4e;
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+}
+@media (min-width: 1200px) {
+  .content .testimonial {
+    max-width: 70%;
+  }
+  .content .testimonial:nth-child(2) {
+    margin-left: 10%;
+  }
+  .content .testimonial:nth-child(3) {
+    margin-left: 15%;
+  }
+  .content .testimonial:nth-child(4) {
+    margin-left: 20%;
+  }
+}
+.content .testimonial::before {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-image: url(../img/comilla.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.content .testimonial:last-of-type {
+  margin-bottom: 0;
+}
+
 .text-center {
   text-align: center;
 }
